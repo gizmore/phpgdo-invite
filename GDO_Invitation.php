@@ -28,7 +28,7 @@ final class GDO_Invitation extends GDO
 	/**
 	 * @return GDO_User
 	 */
-	public function getCreator() { return $this->getValue('invite_creator'); }
+	public function getCreator() { return $this->gdoValue('invite_creator'); }
 	
 	################
 	### Complete ###

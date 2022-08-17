@@ -43,9 +43,10 @@ final class Form extends MethodForm
 			return $field->error('err_invite_max_pendings', [$max]);
 		}
 		
-		if (GDO_User::getBy('user_email', $email))
+		if (GDO_User::withSetting('Mail', 'email', $email))
 		{
-			return $field->error('err_invite_already_member');
+// 			return $field->error('err_invite_already_member');
+			return $field->error('err_already_invited');
 		}
 		
 		if (GDO_Invitation::getBy('invite_email', $email))

@@ -24,7 +24,7 @@ final class Form extends MethodForm
 {
 	public function createForm(GDT_Form $form) : void
 	{
-		$email = GDT_Email::make('invite_email')->required();
+		$email = GDT_Email::make('invite_email')->notNull();
 		$form->addField($email);
 		$form->addField(GDT_Validator::make()->validator($form, $email, [$this, 'validateInvitation']));
 		

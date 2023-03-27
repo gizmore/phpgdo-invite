@@ -34,7 +34,7 @@ final class Form extends MethodForm
 		$form->addField(GDT_AntiCSRF::make());
 	}
 
-	public function formValidated(GDT_Form $form)
+	public function formValidated(GDT_Form $form): GDT
 	{
 		$this->sendInvitationMail(GDO_User::current(), $form->getFormVar('invite_email'));
 

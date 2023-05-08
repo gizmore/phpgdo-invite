@@ -24,7 +24,7 @@ use GDO\User\GDO_User;
 final class Form extends MethodForm
 {
 
-	public function createForm(GDT_Form $form): void
+	protected function createForm(GDT_Form $form): void
 	{
 		$email = GDT_Email::make('invite_email')->notNull();
 		$form->addField($email);

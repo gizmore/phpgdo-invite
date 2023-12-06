@@ -47,7 +47,7 @@ final class Module_Invite extends GDO_Module
 			if (GDO_User::current()->isAuthenticated())
 			{
 				$bar = GDT_Page::$INSTANCE->rightBar();
-				$bar->addField(GDT_Link::make('link_invite')->href(href('Invite', 'Form')));
+                $bar->addField(GDT_Link::make('link_invite')->href(href('Invite', 'Form')));
 			}
 		}
 	}
